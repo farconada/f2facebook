@@ -1,0 +1,11 @@
+plugin.tx_f2facebook.settings {
+	apiIdKey = 139105859479346
+	language = es_ES
+	activityFeed {
+
+	}
+
+	comments {
+
+	}
+}

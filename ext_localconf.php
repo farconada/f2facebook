@@ -10,10 +10,10 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
 	'Pi1',
 	array(
-		'Content' => 'like',
+		'Content' => 'comments, activityFeed',
 	),
 	array(
-		'Content' => 'like',
+		'Content' => 'comments, activityFeed',
 	)
 );
 
