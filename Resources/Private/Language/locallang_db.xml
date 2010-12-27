@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'f2facebook'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tt_content.list_type_pi1">Facebook: Social Plugins</label>
+
+			<label index="sheet.general">General</label>
+
+			<label index="field.type">Social plugin</label>
+			<label index="field.type.activity_feed">Activity feed</label>
+			<label index="field.type.comments">Comments</label>
+			<label index="field.type.facepile">Facepile</label>
+			<label index="field.type.like_button">Like button</label>
+			<label index="field.type.like_box">Like box</label>
+			<label index="field.type.live_stream">Live stream</label>
+			<label index="field.type.login_button">Login button</label>
+			<label index="field.type.recommendations">Recommendations</label>
+
+			<label index="field.show_in_iframe">Show in iFrame (Not recommended!)</label>
+
+			<label index="field.domain">Domain</label>
+			<label index="field.width">Width</label>
+			<label index="field.height">Height</label>
+			<label index="field.show_header">Show header</label>
+			<label index="field.color_scheme">Color scheme</label>
+			<label index="field.color_scheme.light">Light</label>
+			<label index="field.color_scheme.dark">Dark</label>
+			<label index="field.font">Font</label>
+			<label index="field.font.arial">Arial</label>
+			<label index="field.font.lucida_grande">Lucida Grande</label>
+			<label index="field.font.segoe_ui">Segoe UI</label>
+			<label index="field.font.tahoma">Tahoma</label>
+			<label index="field.font.trebuchet_ms">Trebuchet MS</label>
+			<label index="field.font.verdana">Verdana</label>
+			<label index="field.border_color">Border color</label>
+			<label index="field.show_recommendations">Show recommendations</label>
+			<label index="field.unique_id">Unique ID</label>
+			<label index="field.noc">Number of Comments</label>
+			<label index="field.url_like">URL to like</label>
+			<label index="field.layout_style">Layout style</label>
+			<label index="field.show_faces">Show faces</label>
+			<label index="field.verb_display">Verb to display</label>
+			<label index="field.verb_display.like">Like</label>
+			<label index="field.verb_display.recommend">Recommend</label>
+			<label index="field.fb_page_id">Facebook page ID</label>
+			<label index="field.show_stream">Show stream</label>
+			<label index="field.app_id">App ID</label>
+			<label index="field.xid">XID</label>
+			<label index="field.max_rows">Max rows</label>
+			<label index="field.num_rows">Number of rows</label>
+			<label index="field.attr_url">Attribution URL (From)</label>
+			<label index="field.post_to_friends">Always post to friends</label>
+			<label index="field.page_url">Facebook Page URL</label>
+			<label index="field.connections">Connections</label>
+		</languageKey>
+	</data>
+</T3locallang>
