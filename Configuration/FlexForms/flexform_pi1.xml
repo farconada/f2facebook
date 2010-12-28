@@ -1,106 +1,869 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <T3DataStructure>
-	<sheets>
-	<sDEF>
-		<ROOT>
-			<TCEforms>
-			<sheetTitle>RDFa</sheetTitle>
-			</TCEforms>
-			<type>array</type>
-			<el>
-			<switchableControllerActions>
-				<TCEforms>
-					<label>Elemento</label>
-					<config>
-						<type>select</type>
-						<items>
-							<numIndex index="0">
-								<numIndex index="0">Comments</numIndex>
-								<numIndex index="1">Content->likeButton</numIndex>
-							</numIndex>
-						</items>
-					</config>
+	<meta TYPE="array">
+	<langDisable>1</langDisable>
+	</meta>
+	<sheets type="array">
+		<sDEF type="array">
+			<ROOT type="array">
+				<TCEforms type="array">
+					<sheetTitle>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:sheet.general</sheetTitle>
 				</TCEforms>
-			</switchableControllerActions>
-			<settings.templateFile>
-				<TCEforms>
-					<label>Template File (optional)</label>
-					<config>
-						<type>input</type>
-						<wizards type="array">
-						<_PADDING type="integer">2</_PADDING>
-							<link type="array">
-								<type>popup</type>
-								<title>Link</title>
-								<icon>link_popup.gif</icon>
-								<script>browse_links.php?mode=wizard&amp;act=file</script>
-								<JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
-								<params type="array">
-									<blindLinkOptions>page,url,mail,spec,folder</blindLinkOptions>
-									<allowedExtensions>html</allowedExtensions>
-								</params>
+				<type>array</type>
+				<el type="array">
 
-							</link>
-						</wizards>
-					</config>
-				</TCEforms>
-			</settings.templateFile>
-			<settings.name>
-				<TCEforms>
-					<label>name</label>
-					<config>
-						<type>input</type>
-						<eval>trim,nospace</eval>
-					</config>
-				</TCEforms>
-			</settings.name>
-			<settings.nickname>
-				<TCEforms>
-					<label>nickname</label>
-					<config>
-						<type>input</type>
-						<eval>trim,nospace</eval>
-					</config>
-				</TCEforms>
-			</settings.nickname>
-			<settings.photo>
-				<TCEforms>
-					<label>photo</label>
-					<config>
-						<type>input</type>
-						<eval>trim,nospace</eval>
-					</config>
-				</TCEforms>
-			</settings.photo>
-			<settings.role>
-				<TCEforms>
-					<label>role</label>
-					<config>
-						<type>input</type>
-						<eval>trim,nospace</eval>
-					</config>
-				</TCEforms>
-			</settings.role>
-			<settings.url>
-				<TCEforms>
-					<label>url</label>
-					<config>
-						<type>input</type>
-						<eval>trim,nospace</eval>
-					</config>
-				</TCEforms>
-			</settings.url>
-			<settings.org>
-				<TCEforms>
-					<label>affiliation</label>
-					<config>
-						<type>input</type>
-						<eval>trim,nospace</eval>
-					</config>
-				</TCEforms>
-			</settings.org>
-			</el>
-		</ROOT>
-	</sDEF>
+					<switchableControllerActions>
+						<TCEforms>
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.type</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.type.activity_feed</numIndex>
+										<numIndex index="1">Content->activityFeed</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.type.comments</numIndex>
+										<numIndex index="1">Content->comments</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.type.facepile</numIndex>
+										<numIndex index="1">Content->facepile</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.type.like_button</numIndex>
+										<numIndex index="1">Content->likeButton</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.type.like_box</numIndex>
+										<numIndex index="1">Content->likeBox</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.type.live_stream</numIndex>
+										<numIndex index="1">Content->liveStream</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.type.login_button</numIndex>
+										<numIndex index="1">Content->loginButton</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.type.recommendations</numIndex>
+										<numIndex index="1">Content->recommendations</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+
+
+
+				<!-- Activity Feed - Begin -->
+				<!--
+					<a_show_in_iframe>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.show_in_iframe</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->activityFeed</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</a_show_in_iframe>
+				-->
+					<settings.a_domain>
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.domain</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->activityFeed</displayCond>
+							<config type="array">
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</settings.a_domain>
+
+					<settings.a_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.width</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->activityFeed</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>int</eval>
+								<default>300</default>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.a_width>
+
+					<settings.a_height type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.height</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->activityFeed</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>int</eval>
+								<default>300</default>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.a_height>
+
+					<settings.a_show_header type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.show_header</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->activityFeed</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.a_show_header>
+
+					<settings.a_color_scheme>
+						<TCEforms>
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.color_scheme</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->activityFeed</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.color_scheme.light</numIndex>
+										<numIndex index="1">light</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.color_scheme.dark</numIndex>
+										<numIndex index="1">dark</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.a_color_scheme>
+
+					<settings.a_font>
+						<TCEforms>
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->activityFeed</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.arial</numIndex>
+										<numIndex index="1">arial</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.lucida_grande</numIndex>
+										<numIndex index="1">lucida+grande</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.segoe_ui</numIndex>
+										<numIndex index="1">segoe+ui</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.tahoma</numIndex>
+										<numIndex index="1">tahoma</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.trebuchet_ms</numIndex>
+										<numIndex index="1">trebuchet+ms</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.verdana</numIndex>
+										<numIndex index="1">verdana</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.a_font>
+
+					<settings.a_border type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.border_color</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->activityFeed</displayCond>
+							<config type="array">
+								<size>7</size>
+								<max>7</max>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.a_border>
+
+					<settings.a_show_recommendations type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.show_recommendations</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->activityFeed</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.a_show_recommendations>
+				<!-- Activity Feed - End -->
+
+
+
+
+
+				<!-- Comments - Begin -->
+					<settings.b_unique_id type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.unique_id</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->comments</displayCond>
+							<config type="array">
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</settings.b_unique_id>
+
+					<settings.b_number type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.noc</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->comments</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>10</default>
+							</config>
+						</TCEforms>
+					</settings.b_number>
+
+					<settings.b_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.width</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->comments</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>450</default>
+							</config>
+						</TCEforms>
+					</settings.b_width>
+				<!-- Comments - End -->
+
+
+
+
+
+				<!-- Facepile - Begin -->
+					<settings.c_num_rows type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.num_rows</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->facepile</displayCond>
+							<config type="array">
+								<type>input</type>
+								<eval>required,int</eval>
+								<default>10</default>
+							</config>
+						</TCEforms>
+					</settings.c_num_rows>
+
+					<settings.c_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.width</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->facepile</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>200</default>
+							</config>
+						</TCEforms>
+					</settings.c_width>
+				<!-- Facepile - End -->
+
+
+
+
+
+				<!-- Like Button - Begin -->
+				<!--	<d_show_in_iframe>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.show_in_iframe</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeButton</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</d_show_in_iframe>
+				-->
+					<settings.d_url type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.url_like</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeButton</displayCond>
+							<config type="array">
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</settings.d_url>
+
+					<settings.d_layout_style>
+						<TCEforms>
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.layout_style</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeButton</displayCond>
+							<config>
+								<type>select</type>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Standard</numIndex>
+										<numIndex index="1">standard</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">Button count</numIndex>
+										<numIndex index="1">button_count</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.d_layout_style>
+
+					<settings.d_show_faces type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.show_faces</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeButton</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.d_show_faces>
+
+					<settings.d_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.width</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeButton</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>450</default>
+							</config>
+						</TCEforms>
+					</settings.d_width>
+
+					<settings.d_height type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.height</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeButton</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>100</default>
+							</config>
+						</TCEforms>
+					</settings.d_height>
+
+					<settings.d_verb>
+						<TCEforms>
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.verb_display</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeButton</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.verb_display.like</numIndex>
+										<numIndex index="1">like</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.verb_display.recommend</numIndex>
+										<numIndex index="1">recommend</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.d_verb>
+
+					<settings.d_font>
+						<TCEforms>
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeButton</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.arial</numIndex>
+										<numIndex index="1">arial</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.lucida_grande</numIndex>
+										<numIndex index="1">lucida+grande</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.segoe_ui</numIndex>
+										<numIndex index="1">segoe+ui</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.tahoma</numIndex>
+										<numIndex index="1">tahoma</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.trebuchet_ms</numIndex>
+										<numIndex index="1">trebuchet+ms</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.verdana</numIndex>
+										<numIndex index="1">verdana</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.d_font>
+
+					<settings.d_color_scheme>
+						<TCEforms>
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.color_scheme</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeButton</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.color_scheme.light</numIndex>
+										<numIndex index="1">light</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.color_scheme.dark</numIndex>
+										<numIndex index="1">dark</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.d_color_scheme>
+				<!-- Like Button - End -->
+
+
+
+
+
+				<!-- Like Box - Begin -->
+				<!--	<e_show_in_iframe>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.show_in_iframe</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeBox</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</e_show_in_iframe>
+				-->
+					<settings.e_page_url type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.page_url</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeBox</displayCond>
+							<config type="array">
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</settings.e_page_url>
+
+					<settings.e_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.width</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeBox</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>292</default>
+							</config>
+						</TCEforms>
+					</settings.e_width>
+
+					<settings.e_height type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.height</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeBox</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>300</default>
+							</config>
+						</TCEforms>
+					</settings.e_height>
+
+					<settings.e_connections type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.connections</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeBox</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>10</default>
+							</config>
+						</TCEforms>
+					</settings.e_connections>
+
+					<settings.e_show_stream type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.show_stream</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeBox</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.e_show_stream>
+
+					<settings.e_show_header type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.show_header</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->likeBox</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.e_show_header>
+				<!-- Like Box - End -->
+
+
+
+
+
+				<!-- Live Stream - Begin -->
+				<!--	<f_show_in_iframe>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.show_in_iframe</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->liveStream</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</f_show_in_iframe>
+				-->
+					<settings.f_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.width</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->liveStream</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<default>400</default>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.f_width>
+
+					<settings.f_height type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.height</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->liveStream</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<default>500</default>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.f_height>
+
+					<settings.f_xid type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.xid</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->liveStream</displayCond>
+							<config type="array">
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.f_xid>
+
+					<settings.f_attr_url type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.attr_url</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->liveStream</displayCond>
+							<config type="array">
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.f_attr_url>
+
+					<settings.f_post_to_friends type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.post_to_friends</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->liveStream</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.f_post_to_friends>
+				<!-- Live Stream - End -->
+
+
+
+
+
+				<!-- Login Button - Begin -->
+					<settings.g_show_faces type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.show_faces</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->loginButton</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.g_show_faces>
+
+					<settings.g_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.width</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->loginButton</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<default>400</default>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.g_width>
+
+					<settings.g_max_rows type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.max_rows</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->loginButton</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>2</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<default>1</default>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.g_max_rows>
+				<!-- Login Button - End -->
+
+
+
+
+
+				<!-- Recommendations - Begin -->
+				<!--	<h_show_in_iframe>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.show_in_iframe</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->recommendations</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</h_show_in_iframe>
+				-->
+					<settings.h_domain>
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.domain</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->recommendations</displayCond>
+							<config type="array">
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</settings.h_domain>
+
+					<settings.h_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.width</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->recommendations</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<default>300</default>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.h_width>
+
+					<settings.h_height type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.height</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->recommendations</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<default>300</default>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.h_height>
+
+					<settings.h_show_header type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.show_header</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->recommendations</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.h_show_header>
+
+					<settings.h_color_scheme>
+						<TCEforms>
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.color_scheme</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->recommendations</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.color_scheme.light</numIndex>
+										<numIndex index="1">light</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.color_scheme.dark</numIndex>
+										<numIndex index="1">dark</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.h_color_scheme>
+
+					<settings.h_font>
+						<TCEforms>
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->recommendations</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.arial</numIndex>
+										<numIndex index="1">arial</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.lucida_grande</numIndex>
+										<numIndex index="1">lucida+grande</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.segoe_ui</numIndex>
+										<numIndex index="1">segoe+ui</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.tahoma</numIndex>
+										<numIndex index="1">tahoma</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.trebuchet_ms</numIndex>
+										<numIndex index="1">trebuchet+ms</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.font.verdana</numIndex>
+										<numIndex index="1">verdana</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.h_font>
+
+					<settings.h_border type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.border_color</label>
+							<displayCond>FIELD:switchableControllerActions:=:Content->recommendations</displayCond>
+							<config type="array">
+								<size>7</size>
+								<max>7</max>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.h_border>
+				<!-- Recommendations - End -->
+
+
+				</el>
+			</ROOT>
+		</sDEF>
 	</sheets>
 </T3DataStructure>
