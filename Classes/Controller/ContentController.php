@@ -75,6 +75,15 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 	}
 
 	/**
+	 * Live Stream
+	 *
+	 * @return html generado por la vista
+	 */
+	public function liveStreamAction() {
+
+	}
+
+	/**
 	 * ALike Button
 	 *
 	 * @return html generado por la vista
