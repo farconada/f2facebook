@@ -47,6 +47,8 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 		$this->addStylesheet(str_replace('EXT:', t3lib_extMgm::siteRelPath('f2facebook'), $this->settings[$this->request->getControllerActionName()]['stylesheet']));
 
 		$this->getFacebookJavaScript();
+
+
 	}
 
 	/**
@@ -59,6 +61,8 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 	public function initializeView($view) {
 			// Utiliza el template pasado en el Flexform
 		$this->overrideViewFile(trim($this->settings['templateFile']));
+			// se pasan las varables de settings a la vista
+		$this->view->assign('settings', $this->settings);
 	}
 
 	/**
