@@ -10,10 +10,10 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
 	'Pi1',
 	array(
-		'Content' => 'comments, activityFeed',
+		'Content' => 'activityFeed,comments,facepile,likeButton,likeBox,liveStream,loginButton,recommendations',
 	),
 	array(
-		'Content' => 'comments, activityFeed',
+		'Content' => 'activityFeed,comments,facepile,likeButton,likeBox,liveStream,loginButton,recommendations',
 	)
 );
 
