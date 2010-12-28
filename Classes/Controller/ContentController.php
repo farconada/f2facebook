@@ -111,6 +111,15 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 	}
 
 	/**
+	 * Login button
+	 *
+	 * @return html generado por la vista
+	 */
+	public function loginButtonAction() {
+
+	}
+
+	/**
 	 * Recommendations
 	 *
 	 * @return html generado por la vista
