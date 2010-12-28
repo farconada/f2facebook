@@ -10,10 +10,10 @@
 				</TCEforms>
 				<type>array</type>
 				<el type="array">
-					<type_form>
+
+					<switchableControllerActions>
 						<TCEforms>
 							<label>LLL:EXT:f2facebook/Resources/Private/Language/locallang_db.xml:field.type</label>
-							<onChange>reload</onChange>
 							<config>
 								<type>select</type>
 								<eval>required</eval>
@@ -59,8 +59,7 @@
 								</items>
 							</config>
 						</TCEforms>
-					</type_form>
-
+					</switchableControllerActions>
 
 
 
