@@ -39,10 +39,10 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 	 * @return void
 	 */
 	public function initializeAction() {
-			// En TS plugin.tx_f2rdfa.settings.actioname.js
+			// En TS plugin.tx_f2facebook.settings.actioname.js
 			// Puede ser relativo a EXT:
 		$this->addJavaScript(str_replace('EXT:', t3lib_extMgm::siteRelPath('f2facebook'), $this->settings[$this->request->getControllerActionName()]['js']));
-			// En TS plugin.tx_f2rdfa.settings.actioname.stylesheet
+			// En TS plugin.tx_f2facebook.settings.actioname.stylesheet
 			// Puede ser relativo a EXT:
 		$this->addStylesheet(str_replace('EXT:', t3lib_extMgm::siteRelPath('f2facebook'), $this->settings[$this->request->getControllerActionName()]['stylesheet']));
 
