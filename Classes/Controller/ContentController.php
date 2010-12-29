@@ -138,26 +138,31 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 	}
 
 	private function getFacebookJavaScript() {
-		$javascript = "
-			<script>
-				window.fbAsyncInit = function() {
-					FB.init({
-						appId: '".$this->settings['apiIdKey']."',
-						status: true,
-						cookie: true,
-						xfbml: true
-					});
-				};
-				function getCode(){
+		if ( !isset($GLOBALS['f2facebook_js'])) {
+			$GLOBALS['f2facebook_js'] = TRUE;
 
-					var e = document.createElement('script'); e.async = true;
-					e.src = document.location.protocol + '//connect.facebook.net/".$this->settings['language']."/all.js';
-					document.getElementById('fb-root').appendChild(e);
-				};
-			</script>";
+			$javascript = "
+				<script>
+					window.fbAsyncInit = function() {
+						FB.init({
+							appId: '".$this->settings['apiIdKey']."',
+							status: true,
+							cookie: true,
+							xfbml: true
+						});
+					};
+					function getCode(){
+
+						var e = document.createElement('script'); e.async = true;
+						e.src = document.location.protocol + '//connect.facebook.net/".$this->settings['language']."/all.js';
+						document.getElementById('fb-root').appendChild(e);
+					};
+				</script>";
 
 
-		$this->response->addAdditionalHeaderData($javascript);
+			$this->response->addAdditionalHeaderData($javascript);
+			$this->response->appendContent('<div id="fb-root"></div><script type="text/javascript">getCode();</script>');
+		}
 	}
 
 	/**
