@@ -39,10 +39,10 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 	 * @return void
 	 */
 	public function initializeAction() {
-			// En TS plugin.tx_f2rdfa.settings.actioname.js
+			// En TS plugin.tx_f2facebook.settings.actioname.js
 			// Puede ser relativo a EXT:
 		$this->addJavaScript(str_replace('EXT:', t3lib_extMgm::siteRelPath('f2facebook'), $this->settings[$this->request->getControllerActionName()]['js']));
-			// En TS plugin.tx_f2rdfa.settings.actioname.stylesheet
+			// En TS plugin.tx_f2facebook.settings.actioname.stylesheet
 			// Puede ser relativo a EXT:
 		$this->addStylesheet(str_replace('EXT:', t3lib_extMgm::siteRelPath('f2facebook'), $this->settings[$this->request->getControllerActionName()]['stylesheet']));
 
@@ -137,27 +137,38 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 
 	}
 
+	/**
+	 * Incluye el javascript y el tag para que carge el JS SDK de facebook
+	 * Lo incluye una sola vez por pagina
+	 *
+	 * @return void
+	 */
 	private function getFacebookJavaScript() {
-		$javascript = "
-			<script>
-				window.fbAsyncInit = function() {
-					FB.init({
-						appId: '".$this->settings['apiIdKey']."',
-						status: true,
-						cookie: true,
-						xfbml: true
-					});
-				};
-				function getCode(){
+		if ( !isset($GLOBALS['f2facebook_js'])) {
+			$GLOBALS['f2facebook_js'] = TRUE;
 
-					var e = document.createElement('script'); e.async = true;
-					e.src = document.location.protocol + '//connect.facebook.net/".$this->settings['language']."/all.js';
-					document.getElementById('fb-root').appendChild(e);
-				};
-			</script>";
+			$javascript = "
+				<script>
+					window.fbAsyncInit = function() {
+						FB.init({
+							appId: '".$this->settings['apiIdKey']."',
+							status: true,
+							cookie: true,
+							xfbml: true
+						});
+					};
+					function getCode(){
+
+						var e = document.createElement('script'); e.async = true;
+						e.src = document.location.protocol + '//connect.facebook.net/".$this->settings['language']."/all.js';
+						document.getElementById('fb-root').appendChild(e);
+					};
+				</script>";
 
 
-		$this->response->addAdditionalHeaderData($javascript);
+			$this->response->addAdditionalHeaderData($javascript);
+			$this->response->appendContent('<div id="fb-root"></div><script type="text/javascript">getCode();</script>');
+		}
 	}
 
 	/**
@@ -166,13 +177,12 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 	 * @param string $stylesheet Path con la CSS
 	 * @return void
 	 */
-	private function addStylesheet($stylesheet){
+	private function addStylesheet($stylesheet) {
 		if ($stylesheet && file_exists($stylesheet)) {
 				// different solution to add the css if the action is cached or uncached
 			if ($this->request->isCached()) {
 					$GLOBALS['TSFE']->getPageRenderer()->addCssFile($stylesheet);
 			} else {
-
 					$this->response->addAdditionalHeaderData('<link rel="stylesheet" type="text/css" href="'.
 									$stylesheet.'" media="all" />');
 			}
@@ -211,4 +221,5 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 	}
 
 }
+
 ?>

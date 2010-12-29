@@ -13,7 +13,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 		'Content' => 'activityFeed,comments,facepile,likeButton,likeBox,liveStream,loginButton,recommendations',
 	),
 	array(
-		'Content' => 'activityFeed,comments,facepile,likeButton,likeBox,liveStream,loginButton,recommendations',
+		'Content' => '',
 	)
 );
 
