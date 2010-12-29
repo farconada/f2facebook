@@ -137,6 +137,12 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 
 	}
 
+	/**
+	 * Incluye el javascript y el tag para que carge el JS SDK de facebook
+	 * Lo incluye una sola vez por pagina
+	 *
+	 * @return void
+	 */
 	private function getFacebookJavaScript() {
 		if ( !isset($GLOBALS['f2facebook_js'])) {
 			$GLOBALS['f2facebook_js'] = TRUE;
@@ -177,7 +183,6 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 			if ($this->request->isCached()) {
 					$GLOBALS['TSFE']->getPageRenderer()->addCssFile($stylesheet);
 			} else {
-
 					$this->response->addAdditionalHeaderData('<link rel="stylesheet" type="text/css" href="'.
 									$stylesheet.'" media="all" />');
 			}
