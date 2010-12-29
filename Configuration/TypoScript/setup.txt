@@ -1,11 +1,36 @@
 plugin.tx_f2facebook.settings {
-	apiIdKey = 139105859479346
+	apiIdKey =
 	language = es_ES
+
 	activityFeed {
 
 	}
 
 	comments {
+
+	}
+
+	facepile {
+
+	}
+
+	likeButton {
+
+	}
+
+	likeBox {
+
+	}
+
+	liveStream {
+
+	}
+
+	loginButton {
+
+	}
+
+	recommendations {
 
 	}
 }

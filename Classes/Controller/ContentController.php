@@ -177,7 +177,7 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 	 * @param string $stylesheet Path con la CSS
 	 * @return void
 	 */
-	private function addStylesheet($stylesheet){
+	private function addStylesheet($stylesheet) {
 		if ($stylesheet && file_exists($stylesheet)) {
 				// different solution to add the css if the action is cached or uncached
 			if ($this->request->isCached()) {
@@ -221,4 +221,5 @@ class Tx_F2facebook_Controller_ContentController extends Tx_Extbase_MVC_Controll
 	}
 
 }
+
 ?>
