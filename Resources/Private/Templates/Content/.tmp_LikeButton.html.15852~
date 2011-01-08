@@ -1,2 +1,0 @@
-<div id="fb-root"></div><script type="text/javascript">getCode();</script>
-<fb:like href="{settings.d_url}" layout="{settings.d_layout_style}" show_faces="{settings.d_show_faces}" width="{settings.d_width}" height="{settings.d_height}" action="{settings.d_verb}" font="{settings.d_font}" colorscheme="{settings.d_color_scheme}"></fb:like>
