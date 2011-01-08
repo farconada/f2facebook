@@ -1,4 +1,0 @@
-<f:renderFlashMessages class="tx-extbase-flash-message" />
-<div id="fb-root"></div><script type="text/javascript">getCode();</script>
-<f:render section="content" />
-

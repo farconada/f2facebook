@@ -1,2 +1,0 @@
-<div id="fb-root"></div><script type="text/javascript">getCode();</script>
-<fb:like-box href="{settings.e_page_url}" width="{settings.e_width}" connections="{settings.e_connections}" stream="{settings.e_show_stream}" header="{settings.e_show_header}"></fb:like-box>

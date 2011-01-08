@@ -1,2 +1,0 @@
-<div id="fb-root"></div><script type="text/javascript">getCode();</script>
-<fb:activity site="{settings.a_domain}" width="{settings.a_width}" height="{settings.b_height}" header="{settings.a_show_header}" colorscheme="{settings.a_color_scheme}" font="{settings.a_font}" border_color="{settings.a_border}" recommendations="{settings.a_show_recommendations}"></fb:activity>
